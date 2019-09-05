@@ -50,6 +50,7 @@ followersArray.forEach(userName => {
 })
 });
 
+
 /* Step 3: Create a function that accepts a single object as its only argument,
           Using DOM methods and properties, create a component that will return the following DOM element:
 
@@ -66,9 +67,10 @@ followersArray.forEach(userName => {
     <p>Following: {users following count}</p>
     <p>Bio: {users bio}</p>
   </div>
-</div>
+</div>–
 
 */
+
 
 
 /* List of LS Instructors Github username's: 
