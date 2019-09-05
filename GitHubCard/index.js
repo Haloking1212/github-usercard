@@ -3,15 +3,15 @@
            https://api.github.com/users/<your name>
 */
 
-axios.get(`https://api.github.com/users/haloking1212`)
-    .then( response => {
-        // deal with the response data in here
-        console.log(response.data);
-    })
-    .catch( err => {
-        // deal with the error in here
-        console.log("The data was not returned",err)
-    })
+// axios.get(`https://api.github.com/users/haloking1212`)
+//     .then( response => {
+//         // deal with the response data in here
+//         console.log(response.data);
+//     })
+//     .catch( err => {
+//         // deal with the error in here
+//         console.log("The data was not returned",err)
+//  })
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
@@ -34,7 +34,7 @@ axios.get(`https://api.github.com/users/haloking1212`)
           user, and adding that card to the DOM.
 */
 
-const followersArray = ["tetondan", "dustinmyers","justsml", "luishrd", "bigknell"];
+const followersArray = ["tetondan", "dustinmyers","justsml", "luishrd", "bigknell", "haloking1212"];
 
 followersArray.forEach(userName => {
 
