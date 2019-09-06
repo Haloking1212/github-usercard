@@ -3,15 +3,6 @@
            https://api.github.com/users/<your name>
 */
 
-// axios.get(`https://api.github.com/users/haloking1212`)
-//     .then( response => {
-//         // deal with the response data in here
-//         console.log(response.data);
-//     })
-//     .catch( err => {
-//         // deal with the error in here
-//         console.log("The data was not returned",err)
-//  })
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
@@ -49,6 +40,33 @@ followersArray.forEach(userName => {
   console.log(err)
 })
 });
+
+
+
+  axios.get(`https://api.github.com/users/haloking1212/followers`)
+
+  .then( (response) => {
+
+    console.log(response, "response")
+
+    response.data.forEach( user => {
+      const moreFollowers = user.url;
+      axios.get(moreFollowers)
+      .then( (response) => {
+
+      const newPerson = createData(response);
+      selectingDiv.appendChild(newPerson);
+
+        console.log(response, "second reponse")
+      })
+    })
+
+    
+    
+  })
+  .catch( (err) => {
+    console.log(err)
+  })
 
 
 /* Step 3: Create a function that accepts a single object as its only argument,
